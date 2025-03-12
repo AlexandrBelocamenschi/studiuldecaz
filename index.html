@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полное руководство по проектам GitHub</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #e8f0fe 0%, #f7f9fc 100%);
+            color: #2d3748;
+            line-height: 1.8;
+        }
+        h1 {
+            font-size: 2.8em;
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2em;
+            color: #1557b0;
+            margin: 40px 0 20px;
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 10px;
+        }
+        .section {
+            background: #ffffff;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        .example {
+            background: #f8fafc;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #1a73e8;
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #4a5568;
+        }
+        .example h3 {
+            margin-top: 0;
+            color: #2b6cb0;
+            font-size: 1.2em;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        footer {
+            margin-top: 60px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            font-size: 0.95em;
+        }
+        .links a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            transition: color 0.2s;
+        }
+        .links a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Полное руководство по проектам GitHub</h1>
+
+    <div class="section">
+        <h2>Что такое проекты GitHub?</h2>
+        <p>Проекты в GitHub — это адаптируемый инструмент для планирования и отслеживания работы над программным обеспечением или любыми другими задачами. Они интегрируются с issues и pull requests, позволяя организовать работу на уровне репозитория, организации или пользователя. Проекты предоставляют три основных вида отображения:</p>
+        <ul>
+            <li><strong>Доска (Board)</strong>: Визуализация задач в стиле Kanban с колонками, например, "To do", "In progress", "Done".</li>
+            <li><strong>Таблица (Table)</strong>: Табличное представление с настраиваемыми полями (статус, приоритет, дедлайн).</li>
+            <li><strong>Временная шкала (Roadmap)</strong>: Отображение задач по датам для планирования этапов.</li>
+        </ul>
+        <p>Проекты поддерживают автоматизацию (например, перемещение задач при изменении статуса) и совместную работу в реальном времени. Они заменили устаревшие "Projects (classic)" и стали основным инструментом управления задачами в GitHub.</p>
+        <div class="example">
+            <h3>Пример использования</h3>
+            <p>Команда разработчиков создает проект "Release v1.0". На доске они размещают задачи: "Исправить баг #45" (In progress), "Добавить README" (To do), а на временной шкале отмечают дедлайн релиза — 30 марта 2025.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Создание нового проекта</h2>
+        <p>Создание проекта начинается с выбора уровня: пользователь (personal), репозиторий или организация. Вот пошаговый процесс:</p>
+        <ol>
+            <li>Перейдите во вкладку "Projects" (на уровне профиля, репозитория или организации).</li>
+            <li>Нажмите "New project" или зеленую кнопку "Create new project".</li>
+            <li>Выберите шаблон:
+                <ul>
+                    <li><strong>Basic Kanban</strong>: Простая доска с колонками To do, In progress, Done.</li>
+                    <li><strong>Bug triage</strong>: Для сортировки багов с полями Priority и Severity.</li>
+                    <li><strong>Team planning</strong>: Для планирования командной работы с датами.</li>
+                    <li><strong>Blank project</strong>: Пустой проект для полной настройки.</li>
+                </ul>
+            </li>
+            <li>Настройте поля: добавьте статус, приоритет, дедлайн, ответственных и т.д.</li>
+            <li>Сохраните проект и начните добавлять задачи (issues, pull requests или вручную).</li>
+        </ol>
+        <p>Проекты можно сделать приватными (только для владельца/организации) или публичными. Также доступны настройки доступа для коллабораторов.</p>
+        <div class="example">
+            <h3>Пример создания</h3>
+            <p>В организации "MyOrg" администратор переходит в "Projects", выбирает "New project", использует шаблон "Team planning", добавляет поле "Due date" (например, 15 апреля 2025) и задачу "Обновить API" с приоритетом "High".</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Копирование существующего проекта</h2>
+        <p>Функция копирования позволяет быстро создать новый проект на основе существующего, сохраняя структуру и настройки. Процесс:</p>
+        <ol>
+            <li>Откройте проект и нажмите на меню настроек (⋮).</li>
+            <li>Выберите "Copy".</li>
+            <li>Укажите параметры копирования:
+                <ul>
+                    <li><strong>Items</strong>: Копировать задачи (issues/pull requests).</li>
+                    <li><strong>Draft issues</strong>: Включить черновики задач.</li>
+                    <li><strong>Fields</strong>: Сохранить пользовательские поля (например, Priority).</li>
+                    <li><strong>Views</strong>: Перенести виды (доска, таблица).</li>
+                </ul>
+            </li>
+            <li>Выберите новое местоположение (репозиторий, организация или личный профиль).</li>
+            <li>Нажмите "Copy project".</li>
+        </ol>
+        <p>Копия создается как независимый проект, который можно дальше редактировать.</p>
+        <div class="example">
+            <h3>Пример копирования</h3>
+            <p>Проект "Sprint 1" с доской (To do, In progress, Done) и полем "Story points" копируется для "Sprint 2". Пользователь выбирает копирование только структуры без задач, чтобы начать новый спринт с чистого листа.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Миграция из Projects (classic)</h2>
+        <p>GitHub Projects (classic) устарели, и пользователям рекомендуется перейти на новые проекты. Для миграции:</p>
+        <ol>
+            <li>Откройте классический проект.</li>
+            <li>Нажмите "Menu" → "Export project data".</li>
+            <li>Скачайте файл JSON с данными проекта.</li>
+            <li>Создайте новый проект в разделе "Projects".</li>
+            <li>В новом проекте выберите "Import from classic" и загрузите JSON-файл.</li>
+        </ol>
+        <p>После импорта проверьте данные: некоторые функции (например, старые автоматизации) могут не поддерживаться. Новый проект предлагает улучшенные возможности, такие как временные шкалы и настраиваемые поля.</p>
+        <div class="example">
+            <h3>Пример миграции</h3>
+            <p>Пользователь экспортирует классический проект "Old Roadmap" в JSON, затем в новом проекте выбирает "Import from classic", загружает файл и получает доску с задачами вроде "Fix UI" и обновляет дедлайны.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Полная информация доступна в официальной документации GitHub:</p>
+        <p class="links">
+            <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects">About Projects</a> |
+            <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project">Creating a Project</a> |
+            <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/copying-an-existing-project">Copying a Project</a> |
+            <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/migrating-from-projects-classic">Migrating from Projects (classic)</a>
+        </p>
+    </footer>
+</body>
+</html>
